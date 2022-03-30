@@ -1,20 +1,24 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-});
+<script>
+// import Image from "../assets/background.png";
+
+// export default {
+//   data: () => ({
+//     Image,
+//   }),
+// };
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="title">{{ msg }}</h1>
-    <h3 class="sub-title">Manage clients and addresses</h3>
+    <h1 class="sub-title">Manage clients and addresses</h1>
   </div>
   <div class="card-container">
     <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
+      <img
+        src="../assets/cytonn-photography-vWchRczcQwM-unsplash.jpg"
+        class="card-img-top"
+        alt="client"
+      />
       <div class="card-body">
         <h5 class="card-title">Client</h5>
         <p class="card-text">
@@ -25,7 +29,11 @@ defineProps({
     </div>
 
     <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
+      <img
+        src="../assets/jonathan-kemper-xOs8yCItUM0-unsplash.jpg"
+        class="card-img-top"
+        alt="address"
+      />
       <div class="card-body">
         <h5 class="card-title">Address</h5>
         <p class="card-text">
@@ -44,7 +52,6 @@ defineProps({
   padding: 0;
   box-sizing: border-box;
 }
-.title,
 .sub-title {
   text-align: center;
 }
@@ -53,5 +60,10 @@ defineProps({
   display: flex;
   justify-content: space-evenly;
   margin-top: 3rem;
+}
+.card {
+  box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
 }
 </style>
