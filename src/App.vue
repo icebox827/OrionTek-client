@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from "vue-router";
+import { RouterView, RouterLink } from "vue-router";
 import FooterVue from "./components/Footer.vue";
 </script>
 
@@ -21,7 +21,9 @@ import FooterVue from "./components/Footer.vue";
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav"></div>
+          <div class="navbar-nav">
+            <RouterLink to="/">Home</RouterLink>
+          </div>
         </div>
       </div>
     </nav>
