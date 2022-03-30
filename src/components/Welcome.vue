@@ -9,10 +9,32 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-    </h3>
+    <h1 class="title">{{ msg }}</h1>
+    <h3 class="sub-title">Manage clients and addresses</h3>
+  </div>
+  <div class="card-container">
+    <div class="card" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Client</h5>
+        <p class="card-text">
+          View list of clients, create, update and delete clients
+        </p>
+        <a href="#" class="btn btn-primary">Initiate</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Address</h5>
+        <p class="card-text">
+          View list of address and corresponding client, create, update and
+          delete addresses
+        </p>
+        <a href="#" class="btn btn-primary">Initiate</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,26 +44,14 @@ defineProps({
   padding: 0;
   box-sizing: border-box;
 }
-
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
+.title,
+.sub-title {
   text-align: center;
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
 }
 </style>
