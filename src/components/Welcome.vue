@@ -1,4 +1,5 @@
-<script>
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
 // import Image from "../assets/background.png";
 
 // export default {
@@ -24,7 +25,9 @@
         <p class="card-text">
           View list of clients, create, update and delete clients
         </p>
-        <a href="#" class="btn btn-primary">Initiate</a>
+        <a href="#" class="btn btn-primary">
+          <RouterLink to="/">Initiate</RouterLink>
+        </a>
       </div>
     </div>
 
@@ -40,10 +43,13 @@
           View list of address and corresponding client, create, update and
           delete addresses
         </p>
-        <a href="#" class="btn btn-primary">Initiate</a>
+        <a href="#" class="btn btn-primary">
+          <RouterLink to="/">Initiate</RouterLink>
+        </a>
       </div>
     </div>
   </div>
+  <RouterView />
 </template>
 
 <style scoped>
