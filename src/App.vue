@@ -22,21 +22,13 @@ import FooterVue from "./components/Footer.vue";
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page">
-              <RouterLink to="/">Home</RouterLink>
-            </a>
-            <a class="nav-link">
-              <RouterLink to="/about">About</RouterLink>
-            </a>
-          </div>
+          <div class="navbar-nav"></div>
         </div>
       </div>
     </nav>
   </header>
   <WelcomeVue />
   <FooterVue />
-  <RouterView />
 </template>
 
 <style>

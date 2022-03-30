@@ -26,7 +26,7 @@ import { RouterLink, RouterView } from "vue-router";
           View list of clients, create, update and delete clients
         </p>
         <a href="#" class="btn btn-primary">
-          <RouterLink to="/">Initiate</RouterLink>
+          <RouterLink to="/ClientView">Initiate</RouterLink>
         </a>
       </div>
     </div>
@@ -57,6 +57,11 @@ import { RouterLink, RouterView } from "vue-router";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.greetings {
+  background-image: url(../assets/background.png);
+  background-position: center;
 }
 .sub-title {
   text-align: center;
