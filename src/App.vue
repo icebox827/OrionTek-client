@@ -1,5 +1,5 @@
 <script setup>
-import WelcomeVue from "./components/Welcome.vue";
+import { RouterView } from "vue-router";
 import FooterVue from "./components/Footer.vue";
 </script>
 
@@ -26,8 +26,8 @@ import FooterVue from "./components/Footer.vue";
       </div>
     </nav>
   </header>
-  <WelcomeVue />
   <FooterVue />
+  <RouterView />
 </template>
 
 <style>

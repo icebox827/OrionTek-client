@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 // import Image from "../assets/background.png";
 
 // export default {
@@ -49,7 +49,6 @@ import { RouterLink, RouterView } from "vue-router";
       </div>
     </div>
   </div>
-  <RouterView />
 </template>
 
 <style scoped>
@@ -59,10 +58,10 @@ import { RouterLink, RouterView } from "vue-router";
   box-sizing: border-box;
 }
 
-.greetings {
+/* .greetings {
   background-image: url(../assets/background.png);
   background-position: center;
-}
+} */
 .sub-title {
   text-align: center;
 }
