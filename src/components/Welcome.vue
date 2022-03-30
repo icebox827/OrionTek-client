@@ -26,7 +26,7 @@ import { RouterLink, RouterView } from "vue-router";
           View list of clients, create, update and delete clients
         </p>
         <a href="#" class="btn btn-primary">
-          <RouterLink to="/ClientView">Initiate</RouterLink>
+          <RouterLink to="/client">Initiate</RouterLink>
         </a>
       </div>
     </div>
@@ -44,7 +44,7 @@ import { RouterLink, RouterView } from "vue-router";
           delete addresses
         </p>
         <a href="#" class="btn btn-primary">
-          <RouterLink to="/">Initiate</RouterLink>
+          <RouterLink to="/address">Initiate</RouterLink>
         </a>
       </div>
     </div>
