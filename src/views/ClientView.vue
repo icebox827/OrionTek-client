@@ -13,18 +13,15 @@ import ClientList from "../components/ClientList.vue";
   <ClientList />
 </template>
 <style>
-/* .heading {
-  text-align: center;
-}
-
-.add-button {
-  display: flex;
-  justify-content: start;
-} */
 
 .client {
   display: flex;
   justify-content: space-between;
+}
+
+.heading,
+.add-button {
+  margin: 1.5rem;
 }
 
 a {
