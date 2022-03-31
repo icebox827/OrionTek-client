@@ -13,7 +13,6 @@ import ClientList from "../components/ClientList.vue";
   <ClientList />
 </template>
 <style>
-
 .client {
   display: flex;
   justify-content: space-between;
