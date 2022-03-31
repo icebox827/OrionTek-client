@@ -20,27 +20,17 @@ export default {
     const requestOptions = {
       methods: "post",
       headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify(this.clients),
     };
 
     fetch(baseUrl, requestOptions)
       .then((res) => res.json())
       .then((data) => (this.clients = data));
   },
-
-  // methods: {
-  //   postData(e) {
-  //     let baseUrl = "http://localhost:3003/api/v1/clients";
-
-  //     fetch(baseUrl, this.clients).then((res) => res.json());
-  //     e.preventDefault();
-  //   },
-  // },
 };
 </script>
 
 <template>
-  <form v-on:submit="clients" method="post">
+  <form @submit="clients" method="post">
     <div class="mb-4">
       <label for="firstName" class="form-label">First name</label>
       <input
