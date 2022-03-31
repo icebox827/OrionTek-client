@@ -16,6 +16,7 @@ import ClientList from "../components/ClientList.vue";
 .client {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .heading,
