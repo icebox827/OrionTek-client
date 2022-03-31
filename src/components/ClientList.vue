@@ -19,10 +19,10 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="card-container">
     <div v-for="client in clients" :key="client.id">
-      <div class="card-container">
-        <div class="card" style="width: 18rem">
+      <div>
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">
               {{ client.first_name }} {{ client.last_name }}
@@ -33,9 +33,10 @@ export default {
             <li class="list-group-item">{{ client.email }}</li>
             <li class="list-group-item">{{ client.phone }}</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Update</a>
-            <a href="#" class="card-link">Delete</a>
+          <div class="card-body block-link">
+            <a class="card-link">Update</a>
+            <a class="card-link">Delete</a>
+            <a class="card-link">more</a>
           </div>
         </div>
       </div>
@@ -46,6 +47,18 @@ export default {
 <style>
 .card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 3rem;
+}
+
+.card {
+  width: 18rem;
+  box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
+}
+
+.block-link {
+  background-color: black;
 }
 </style>

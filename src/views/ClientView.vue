@@ -1,20 +1,34 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import ClientList from "../components/ClientList.vue";
 </script>
 
 <template>
   <div class="client">
-    <h1>List of all clients</h1>
-    <ClientList />
+    <h1 class="heading">List of all clients</h1>
+    <a class="btn btn-primary add-button">
+      <router-link to="/addClient">Add Client +</router-link>
+    </a>
   </div>
+  <ClientList />
 </template>
-
 <style>
-@media (min-width: 1024px) {
-  .client {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+/* .heading {
+  text-align: center;
+}
+
+.add-button {
+  display: flex;
+  justify-content: start;
+} */
+
+.client {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 </style>
