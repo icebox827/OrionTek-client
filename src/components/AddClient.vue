@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <script>
 export default {
   name: "AddClient",
@@ -14,23 +18,24 @@ export default {
     };
   },
 
-  created() {
-    let baseUrl = "http://localhost:3003/api/v1/clients";
+  methods: {
+    addClients() {
+      let baseUrl = "http://localhost:3003/api/v1/clients";
 
-    const requestOptions = {
-      methods: "post",
-      headers: { "Content-Type": "application/json" },
-    };
-
-    fetch(baseUrl, requestOptions)
-      .then((res) => res.json())
-      .then((data) => (this.clients = data));
+      fetch(baseUrl, {
+        method: "POST",
+        headers: { "Content-Type": "applications/json" },
+        body: JSON.stringify(this.clients),
+      })
+        .then((res) => res.json())
+        .then((data) => (this.clients = data));
+    },
   },
 };
 </script>
 
 <template>
-  <form @submit="clients" method="post">
+  <form v-on:submit="addClients()" method="post">
     <div class="mb-4">
       <label for="firstName" class="form-label">First name</label>
       <input
@@ -82,6 +87,10 @@ export default {
         hidden
       />
     </div>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary">
+      <a href="#">
+        <RouterLink to="/client">Add</RouterLink>
+      </a>
+    </button>
   </form>
 </template>
