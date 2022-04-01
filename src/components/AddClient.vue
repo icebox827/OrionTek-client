@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import axios from "axios";
 </script>
 
 <script>
@@ -8,34 +9,37 @@ export default {
 
   data() {
     return {
-      clients: {
-        first_name: "",
-        last_name: "",
-        email: "",
-        password: "",
-        company_id: 1,
-      },
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      phone: "",
+      company_id: 1,
     };
   },
 
   methods: {
-    addClients() {
+    handleSubmit(e) {
+      e.preventDefault();
       let baseUrl = "http://localhost:3003/api/v1/clients";
 
-      fetch(baseUrl, {
-        method: "POST",
-        headers: { "Content-Type": "applications/json" },
-        body: JSON.stringify(this.clients),
-      })
-        .then((res) => res.json())
-        .then((data) => (this.clients = data));
+      axios
+        .post(baseUrl, {
+          first_name: this.first_name,
+          last_name: this.last_name,
+          email: this.email,
+          password: this.password,
+          phone: this.phone,
+          company_id: this.company_id,
+        })
+        .then((res) => res.json());
     },
   },
 };
 </script>
 
 <template>
-  <form v-on:submit="addClients()" method="post">
+  <form @submit="handleSubmit" method="post">
     <div class="mb-4">
       <label for="firstName" class="form-label">First name</label>
       <input
@@ -43,7 +47,7 @@ export default {
         class="form-control"
         id="firstName"
         placeholder="First name"
-        v-model="clients.first_name"
+        v-model="first_name"
       />
     </div>
     <div class="mb-4">
@@ -53,7 +57,7 @@ export default {
         class="form-control"
         id="lastName"
         placeholder="last name"
-        v-model="clients.last_name"
+        v-model="last_name"
       />
     </div>
     <div class="mb-4">
@@ -64,7 +68,7 @@ export default {
         id="email"
         aria-describedby="emailHelp"
         placeholder="email"
-        v-model="clients.email"
+        v-model="email"
       />
     </div>
     <div class="mb-4">
@@ -74,7 +78,7 @@ export default {
         class="form-control"
         id="phone"
         placeholder="phone"
-        v-model="clients.phone"
+        v-model="phone"
       />
     </div>
     <div class="mb-4">
@@ -83,7 +87,7 @@ export default {
         type="number"
         class="form-control"
         id="companyId"
-        v-model="clients.company_id"
+        v-model="company_id"
         hidden
       />
     </div>
