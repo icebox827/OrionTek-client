@@ -1,3 +1,8 @@
+<script setup>
+import { RouterLink } from "vue-router";
+// import axios from "axios";
+</script>
+
 <script>
 export default {
   name: "ClientList",
@@ -34,9 +39,15 @@ export default {
             <li class="list-group-item">{{ client.phone }}</li>
           </ul>
           <div class="card-body block-link">
-            <a class="card-link">Update</a>
-            <a class="card-link">Delete</a>
-            <a class="card-link">more</a>
+            <a class="card-link">
+              <RouterLink to="/updateClient">Update</RouterLink>
+            </a>
+            <a class="card-link">
+              <RouterLink to="/deleteClient">Delete</RouterLink>
+            </a>
+            <a class="card-link">
+              <RouterLink to="/showClient">Details</RouterLink>
+            </a>
           </div>
         </div>
       </div>

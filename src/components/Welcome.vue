@@ -14,7 +14,7 @@ import { RouterLink } from "vue-router";
     <h1 class="sub-title">Manage clients and addresses</h1>
   </div>
   <div class="card-container">
-    <div class="card" style="width: 18rem">
+    <div class="card">
       <img
         src="../assets/cytonn-photography-vWchRczcQwM-unsplash.jpg"
         class="card-img-top"
@@ -27,24 +27,6 @@ import { RouterLink } from "vue-router";
         </p>
         <a href="#" class="btn btn-primary">
           <RouterLink to="/client">Initiate</RouterLink>
-        </a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem">
-      <img
-        src="../assets/jonathan-kemper-xOs8yCItUM0-unsplash.jpg"
-        class="card-img-top"
-        alt="address"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Address</h5>
-        <p class="card-text">
-          View list of address and corresponding client, create, update and
-          delete addresses
-        </p>
-        <a href="#" class="btn btn-primary">
-          <RouterLink to="/address">Initiate</RouterLink>
         </a>
       </div>
     </div>
@@ -72,6 +54,7 @@ import { RouterLink } from "vue-router";
   margin-top: 3rem;
 }
 .card {
+  width: 35rem;
   box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
   -webkit-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
   -moz-box-shadow: 16px 15px 12px 6px rgba(0, 0, 0, 0.73);
