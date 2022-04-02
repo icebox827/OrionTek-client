@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink } from "vue-router";
-// import axios from "axios";
 </script>
 
 <script>
@@ -19,6 +18,14 @@ export default {
     fetch(baseUrl)
       .then((res) => res.json())
       .then((data) => (this.clients = data));
+  },
+
+  methods: {
+    deleteClient(id) {
+      fetch("http://localhost:3003/api/v1/clients/" + id, {
+        method: "DELETE",
+      });
+    },
   },
 };
 </script>
@@ -42,9 +49,7 @@ export default {
             <a class="card-link">
               <RouterLink to="/updateClient">Update</RouterLink>
             </a>
-            <a class="card-link">
-              <RouterLink to="/deleteClient">Delete</RouterLink>
-            </a>
+            <a class="card-link" href="#" v-on:click="deleteClient"> Delete </a>
             <a class="card-link">
               <RouterLink to="/showClient">Details</RouterLink>
             </a>

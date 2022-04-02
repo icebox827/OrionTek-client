@@ -1,11 +1,11 @@
 <script setup>
-import AddresList from "../components/AddresList.vue";
+import UpdateClient from "../components/UpdateClient.vue";
 </script>
 
 <template>
   <div class="about">
-    <h1>Address listing</h1>
-    <AddresList />
+    <h1>Update client info</h1>
+    <UpdateClient />
   </div>
 </template>
 
