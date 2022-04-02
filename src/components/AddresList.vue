@@ -9,11 +9,11 @@ export default {
   },
 
   create() {
-    let baseUrl = "http://localhost:3003//api/v1/clients/1/addresses";
+    let baseUrl = "http://localhost:3003/api/v1/clients/1/addresses";
 
     fetch(baseUrl)
       .then((res) => res.json())
-      .then((data) => (this.clients = data));
+      .then((data) => (this.addresses = data));
   },
 };
 </script>

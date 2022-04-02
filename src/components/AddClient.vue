@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <form @submit="handleSubmit" method="post">
+  <form @submit="handleSubmit">
     <div class="mb-4">
       <label for="firstName" class="form-label">First name</label>
       <input
